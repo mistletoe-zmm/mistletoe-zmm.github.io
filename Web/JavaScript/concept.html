@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.d6ad21ed.css" as="style"><link rel="preload" href="/assets/js/app.3213f677.js" as="script"><link rel="preload" href="/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/assets/js/14.5a3097fb.js" as="script"><link rel="prefetch" href="/assets/js/10.b560715c.js"><link rel="prefetch" href="/assets/js/11.d67ec722.js"><link rel="prefetch" href="/assets/js/12.2349538e.js"><link rel="prefetch" href="/assets/js/13.46736f71.js"><link rel="prefetch" href="/assets/js/15.3e58e9b2.js"><link rel="prefetch" href="/assets/js/3.df158bf2.js"><link rel="prefetch" href="/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/assets/js/5.06163824.js"><link rel="prefetch" href="/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/assets/js/7.ddd2f8cf.js"><link rel="prefetch" href="/assets/js/8.b22f1272.js"><link rel="prefetch" href="/assets/js/9.7af22604.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d6ad21ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Home</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Web/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Web/Interview/" class="nav-link">
+  常见面试
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Web/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Web/Interview/" class="nav-link">
+  常见面试
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Web/JavaScript/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/Web/JavaScript/concept.html" aria-current="page" class="active sidebar-link">常见概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Web/JavaScript/concept.html#原型与原型链" class="sidebar-link">原型与原型链</a></li><li class="sidebar-sub-header"><a href="/Web/JavaScript/concept.html#new运算符的实现机制" class="sidebar-link">new运算符的实现机制</a></li></ul></li><li><a href="/Web/JavaScript/es6.html" class="sidebar-link">es6</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="一些概念"><a href="#一些概念" class="header-anchor">#</a> 一些概念</h1> <h2 id="原型与原型链"><a href="#原型与原型链" class="header-anchor">#</a> 原型与原型链</h2> <h3 id="原型"><a href="#原型" class="header-anchor">#</a> 原型</h3> <p>在 JS 中，每当定义一个对象（函数也是对象）时，对象中都会包含一些预定义的属性。其中每个函数对象都有一个prototype 属性，这个属性指向函数的原型对象。</p> <h3 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h3> <p>函数的原型链对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针__proto__,该指针是指向上一层的原型对象，而上一层的原型对象的结构依然类似。因此可以利用__proto__一直指向Object的原型对象上，而Object原型对象用Object.prototype.__ proto__ = null表示原型链顶端。如此形成了js的原型链继承。同时所有的js对象都有Object的基本防范</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p></div> <h2 id="new运算符的实现机制"><a href="#new运算符的实现机制" class="header-anchor">#</a> new运算符的实现机制</h2> <ol><li>首先创建了一个新的空对象</li> <li>设置原型，将对象的原型设置为函数的prototype对象。</li> <li>让函数的this指向这个对象，执行构造函数的代码（为这个新对象添加属性）</li> <li>判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象。</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Web/JavaScript/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/Web/JavaScript/es6.html">
+        es6
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3213f677.js" defer></script><script src="/assets/js/2.845378f6.js" defer></script><script src="/assets/js/14.5a3097fb.js" defer></script>
+  </body>
+</html>

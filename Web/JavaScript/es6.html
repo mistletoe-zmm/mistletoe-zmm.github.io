@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>es6的一些语法 | Home</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.d6ad21ed.css" as="style"><link rel="preload" href="/assets/js/app.3213f677.js" as="script"><link rel="preload" href="/assets/js/2.845378f6.js" as="script"><link rel="preload" href="/assets/js/15.3e58e9b2.js" as="script"><link rel="prefetch" href="/assets/js/10.b560715c.js"><link rel="prefetch" href="/assets/js/11.d67ec722.js"><link rel="prefetch" href="/assets/js/12.2349538e.js"><link rel="prefetch" href="/assets/js/13.46736f71.js"><link rel="prefetch" href="/assets/js/14.5a3097fb.js"><link rel="prefetch" href="/assets/js/3.df158bf2.js"><link rel="prefetch" href="/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/assets/js/5.06163824.js"><link rel="prefetch" href="/assets/js/6.8aca83c8.js"><link rel="prefetch" href="/assets/js/7.ddd2f8cf.js"><link rel="prefetch" href="/assets/js/8.b22f1272.js"><link rel="prefetch" href="/assets/js/9.7af22604.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d6ad21ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Home</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Web/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Web/Interview/" class="nav-link">
+  常见面试
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Web/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Web/Interview/" class="nav-link">
+  常见面试
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Web/JavaScript/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/Web/JavaScript/concept.html" class="sidebar-link">常见概念</a></li><li><a href="/Web/JavaScript/es6.html" aria-current="page" class="active sidebar-link">es6</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Web/JavaScript/es6.html#var与const与let" class="sidebar-link">var与const与let</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6的一些语法"><a href="#es6的一些语法" class="header-anchor">#</a> es6的一些语法</h1> <h2 id="var与const与let"><a href="#var与const与let" class="header-anchor">#</a> var与const与let</h2> <h3 id="var"><a href="#var" class="header-anchor">#</a> var</h3> <ol><li>声明提升</li> <li>没有块级作用域</li> <li>变量覆盖</li> <li>在全局上下文中var声明的会挂载到window上</li></ol> <h3 id="let-const"><a href="#let-const" class="header-anchor">#</a> let const</h3> <ol><li>不允许重复声明</li> <li>仅在块级作用域下有效</li> <li>不存在变量提升</li></ol> <h3 id="const"><a href="#const" class="header-anchor">#</a> const</h3> <ol><li>用于声明常量,不允许重新赋值,基本类型不可改,引用类型可改(内存地址未变即可)</li> <li>声明时需赋值</li></ol> <p>报错示例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">d</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>正确示例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Web/JavaScript/concept.html" class="prev">
+        常见概念
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3213f677.js" defer></script><script src="/assets/js/2.845378f6.js" defer></script><script src="/assets/js/15.3e58e9b2.js" defer></script>
+  </body>
+</html>
